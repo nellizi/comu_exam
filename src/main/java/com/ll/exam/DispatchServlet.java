@@ -15,6 +15,7 @@ public class DispatchServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
        Rq rq = new Rq(req, resp);
+       rq.appendBody("왜 안 나오지?");
 
         MemberController memberController = new MemberController();
         ArticleController articleController = new ArticleController();
